@@ -1,0 +1,23 @@
+{
+  "name": "money-track",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "public:check": "node scripts/check-public.mjs",
+    "dev": "npm run dev --workspace apps/web",
+    "build": "npm run build --workspace apps/web",
+    "typecheck": "npm run typecheck --workspace apps/web",
+    "format:check": "prettier --check apps/web/src apps/web/*.json docs *.md",
+    "format": "prettier --write apps/web/src apps/web/*.json docs *.md"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "openapi-typescript": "^7.10.1",
+    "prettier": "^3.6.2",
+    "vitest": "^5.0.1"
+  }
+}
