@@ -1,0 +1,1 @@
+-r ../apps/collector/requirements.txt
